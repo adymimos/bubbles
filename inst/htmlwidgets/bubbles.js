@@ -62,7 +62,7 @@ HTMLWidgets.widget({
     newNode.append("circle")
         .style("fill", "#FFFFFF");
     newNode.append("text")
-      .style("font-size", function(d) { return Math.min(2 * d.r, (2 * d.r - 8) / this.getComputedTextLength() * 24) + "px"; })
+      .style("font-size", function(d) { return Math.min(2 * d.r, (2 * d.r - 8) / this.getComputedTextLength() * 40) + "px"; })
       .attr("dy", ".35em");
 
     // Remove old nodes
