@@ -62,8 +62,8 @@ HTMLWidgets.widget({
     newNode.append("circle")
         .style("fill", "#FFFFFF");
     newNode.append("text")
-        .attr("dy", ".3em")
-        .style("text-anchor", "middle");
+      .style("font-size", function(d) { return Math.min(2 * d.r, (2 * d.r - 8) / this.getComputedTextLength() * 24) + "px"; })
+      .attr("dy", ".35em");
 
     // Remove old nodes
     node.exit().transition()
