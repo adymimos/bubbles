@@ -64,7 +64,6 @@ HTMLWidgets.widget({
         .attr("r", function(d) { return d.r; });
     newNode.append("text")
       .text(function(d) { return d.name; })
-      .style("font-size", function(d) { return Math.min(2 * d.r/10, (2 * d.r - 8) / this.getComputedTextLength() * 150) + "px"; })
       .style("text-anchor", "middle")
       .attr("dy", ".35em");
 
@@ -90,6 +89,7 @@ HTMLWidgets.widget({
 
     node.select("text")
         .text(function(d) { return d.label; })
+        .style("font-size", function(d) { return Math.min(2 * d.r, (2 * d.r - 8) / this.getComputedTextLength() * 24) + "px"; })
         .style("fill", function(d) { return d.textColor; });
   },
 
