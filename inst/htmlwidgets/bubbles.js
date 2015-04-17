@@ -62,7 +62,7 @@ HTMLWidgets.widget({
     newNode.append("circle")
         .style("fill", "#FFFFFF");
     newNode.append("text")
-      .style("font-size", function(d) { return Math.min(2 * d.r, (2 * d.r - 8) / this.getComputedTextLength() * 70) + "px"; })
+      .style("font-size", function(d) { return Math.min(2 * d.r, (2 * d.r - 8) / this.getComputedTextLength() * 150) + "px"; })
       .style("text-anchor", "middle")
       .attr("dy", ".35em");
 
