@@ -60,10 +60,11 @@ HTMLWidgets.widget({
 
     newNode.append("title");
     newNode.append("circle")
-        .style("fill", "#FFFFFF");
+        .style("fill", "#FFFFFF")
+        .attr("r", function(d) { return d.r; });
     newNode.append("text")
       .text(function(d) { return d.name; })
-      .style("font-size", function(d) { return Math.min(2 * d.r/100, (2 * d.r - 8) / this.getComputedTextLength() * 150) + "px"; })
+      .style("font-size", function(d) { return Math.min(2 * d.r/10, (2 * d.r - 8) / this.getComputedTextLength() * 150) + "px"; })
       .style("text-anchor", "middle")
       .attr("dy", ".35em");
 
